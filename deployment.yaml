@@ -1,34 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: html-demo
+  name: java-demo
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: html-demo
+      app: java-demo
   template:
     metadata:
       labels:
-        app: html-demo
+        app: java-demo
     spec:
       containers:
-      - name: html-demo
-        image: 23mis0625/html-demo:latest
+      - name: java-demo
+        image: 23mis0625/java-demo:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
-  name: html-demo-service
+  name: java-demo-service
 spec:
   type: NodePort
   selector:
-    app: html-demo
+    app: java-demo
   ports:
     - port: 80
-      targetPort: 80
-      nodePort: 30010
+      targetPort: 8080
+      nodePort: 30020
