@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Deployment Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 700px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #00e6e6;
+        }
+
+        h2 {
+            font-weight: normal;
+            margin-bottom: 25px;
+            color: #ccc;
+        }
+
+        .pipeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+
+        .step {
+            flex: 1;
+            margin: 0 5px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #1abc9c;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .step span {
+            display: block;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .status {
+            margin-top: 20px;
+            padding: 12px;
+            background: #2ecc71;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .info {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #ddd;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>🚀 CI/CD Pipeline Dashboard</h1>
+        <h2>Jenkins • Docker • Kubernetes</h2>
+
+        <div class="pipeline">
+            <div class="step">Code<span>GitHub</span></div>
+            <div class="step">Build<span>Jenkins</span></div>
+            <div class="step">Image<span>Docker</span></div>
+            <div class="step">Deploy<span>K8s</span></div>
+        </div>
+
+        <div class="status">
+            ✅ Deployment Successful
+        </div>
+
+        <div class="info">
+            This application is automatically built, containerized, and deployed 
+            using a fully automated CI/CD pipeline.
+        </div>
+
+        <div class="footer">
+            Version 1.0 • Auto Deployed via Jenkins Pipeline
+        </div>
+    </div>
+</body>
+</html>
